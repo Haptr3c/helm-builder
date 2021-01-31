@@ -1,6 +1,6 @@
 FROM docker:18
 
-RUN apk add --no-cache python py-pip curl && \
+RUN apk add --no-cache python py-pip curl openssl bash && \
     pip install awscli
 RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/v1.20.0/bin/linux/amd64/kubectl" && \
     chmod +x kubectl && \
